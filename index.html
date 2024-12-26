@@ -63,91 +63,17 @@ background: white;
 <nav>
 
 <button><a href="./index.html"style="text-decoration:none;color: #0a0a0a">Home</a></button>
-<button><a href="./about.html"style="text-decoration:none;color: #0a0a0a">Gingerbread cookies</a></button>
-<button><a href="./service.html"style="text-decoration:none;color: #0a0a0a">Apple Pie</a></button>
+<button><a href="./Recipes.html"style="text-decoration:none;color: #0a0a0a">Recipes</a></button>
+<button><a href="./Games.html"style="text-decoration:none;color: #0a0a0a">Games</a></button>
 
 </nav>
   
-<h1>Different Holiday Recipes</h1>
-<img src="https://www.kingarthurbaking.com/sites/default/files/2024-11/easy-holiday-baking-recipes.jpg"
+<h1>Fun Holiday Activities</h1>
+<img src="https://images.pexels.com/photos/250177/pexels-photo-250177.jpeg?auto=compress&cs=tinysrgb&w=600"
      width="300"
      height="200" />
-<p>~A bunch of fun holiday recipes to try!~</p>
+<p>~Feeling bored during winter break?? This website is your guide to fun and engaging activities! Explore a collection of fun activities, from testing delicious new recipes to learning more with engaging games!~</p>
 
-<h1>Christmas Games</h1>
-<h2>Trivia</h2>
-  <div id="question"></div>
-  <div id="choices"></div>
-  <button onclick="checkAnswer()">Submit</button>
-  <p id="result"></p>
-
-  <script>
-    const questions = [
-      {
-        question: "What color is Rudolph's nose?",
-        choices: ["Red", "Green", "Blue", "Yellow"],
-        correctAnswer: "Red"
-      },
-      {
-        question: "Who delivers presents on Christmas Eve?",
-        choices: ["Santa Claus", "The Easter Bunny", "The Tooth Fairy", "The Grinch"],
-        correctAnswer: "Santa Claus"
-      },
-      {
-        question: "What animal pulls Santa's sleigh?",
-        choices: ["Horses", "Reindeer", "Dogs", "Cats"],
-        correctAnswer: "Reindeer"
-      },
-      {
-        question: "In which modern-day country was St. Nicholas born?",
-        choices: ["Canada", "Italy", "Turkey", "Japan"],
-        correctAnswer: "Turkey"
-      },
-      {
-        question: "What is the traditional Christmas color for mistletoe?",
-        choices: ["Red", "Green", "White", "Gold"],
-        correctAnswer: "White"
-      }
-    ];
-
-    let currentQuestion = 0;
-    let score = 0;
-
-    function loadQuestion() {
-      const questionData = questions[currentQuestion];
-      document.getElementById("question").textContent = questionData.question;
-
-      const choicesDiv = document.getElementById("choices");
-      choicesDiv.innerHTML = "";
-
-      for (let i = 0; i < questionData.choices.length; i++) {
-        const button = document.createElement("button");
-        button.textContent = questionData.choices[i];
-        button.onclick = () => checkAnswer(i);
-        choicesDiv.appendChild(button);
-      }
-    }
-
-    function checkAnswer(selectedChoice) {
-      if (questions[currentQuestion].choices[selectedChoice] === questions[currentQuestion].correctAnswer) {
-        score++;
-      }
-
-      currentQuestion++;
-
-      if (currentQuestion < questions.length) {
-        loadQuestion();
-      } else {
-        document.getElementById("result").textContent = `You scored ${score} out of ${questions.length}!`;
-      }
-    }
-
-    loadQuestion();
-    
-    
-    
-  </script>
-  
 </body>
 
 </html>
